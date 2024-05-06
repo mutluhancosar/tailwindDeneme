@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Project</title>
+    <link href="./output.css" rel="stylesheet">
+
+    <style>
+        .content {
+          display: none;
+        }
+        .active {
+          display: block;
+        }
+      </style>
+</head>
+<body>
+    <div class="container text-center my-5">
+        <h1 class="baslik text-4xl text-red-600 text-center font-bold">Müzik Dükkanım</h1>
+        
+        <div class="container">
+            <div class="container text-purple-600 my-5">
+                <a href="#" style="text-decoration: underline; text-underline-offset: 3px;" onclick="showContent('anasayfa')">Anasayfa</a>
+                <a href="#" style="text-decoration: underline; text-underline-offset: 3px;" onclick="showContent('urunler')">Ürünlerimiz</a>
+                <a href="#" style="text-decoration: underline; text-underline-offset: 3px;" onclick="showContent('hakkimizda')">Hakkımızda</a>
+            </div>
+
+            <div id="anasayfa" class="content active">
+                <h2 class="text-2xl text-purple-800 font-semibold">Ana Sayfa</h2>
+                <div class="my-5">Müzik Dükkanım sitemize hoş geldiniz! Bu sitede çeşitli müzik aletlerini bulabilirsiniz. Uygun fiyatlarımız ve kaliteli ürünlerimiz için <a href="#" style="text-decoration-line: underline;" onclick="showContent('urunler')">Ürünlerimiz</a> sayfamızı ziyaret edebilirsiniz</div>
+                <h3 class="text-amber-400">Sitemizde bulunan müzik aletleri</h3>
+                <ul class="list-disc mt-2">
+                    <li>Gitar</li>
+                    <li>Davul</li>
+                    <li>Piyano</li>
+                    <li>Keman</li>
+                </ul>
+            </div>
+
+            <div id="urunler" class="content">
+                <div class="container">
+                    <img src="../img/blackguitar.jpg" style="display: block; margin:auto">
+                    <h1>1.</h1>
+                    <p> Klasik gitar 1500&#8378</p>
+                </div>
+                <div class="container">
+                    <img src="../img/blackguitar.jpg" style="display: block; margin:auto">
+                    <h1>1.</h1>
+                    <p> Klasik gitar 1500&#8378</p>
+                </div>
+                <div class="container">
+                    <img src="../img/blackguitar.jpg" style="display: block; margin:auto">
+                    <h1>1.</h1>
+                    <p> Klasik gitar 1500&#8378</p>
+                </div>
+                <div class="container">
+                    <img src="../img/blackguitar.jpg" style="display: block; margin:auto">
+                    <h1>1.</h1>
+                    <p> Klasik gitar 1500&#8378</p>
+                </div>
+                <div class="container">
+                    <img src="../img/blackguitar.jpg" style="display: block; margin:auto">
+                    <h1>1.</h1>
+                    <p> Klasik gitar 1500&#8378</p>
+                </div>
+            </div>
+            <div class="container text-left">
+                <div id="hakkimizda" class="content">
+                    <div class="container ml-2">
+                        <p class="my-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit.<p>
+                
+                        <h1 class="text-amber-400">Vizyonumuz</h1>
+                        <p class="my-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero aspernatur provident doloribus, hic eligendi nihil assumenda libero doloremque quaerat impedit rerum fugit ullam perferendis quo veritatis recusandae at tempore nostrum?</p>
+                
+                        <h1 class="text-amber-400">Misyonumuz</h1>
+                        <p class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero rem totam voluptates aliquam iusto ipsam maiores est optio quas accusamus ut voluptate dignissimos iste consectetur incidunt, sint itaque sapiente? Cumque.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    function showContent(id) {
+      var contents = document.getElementsByClassName('content');
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].classList.remove('active');
+      }
+      document.getElementById(id).classList.add('active');
+    }
+    </script>
+
+</body>
+</html>
